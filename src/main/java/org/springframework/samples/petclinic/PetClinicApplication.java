@@ -18,6 +18,7 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.stagemonitor.core.Stagemonitor;
 
 /**
  * PetClinic Spring Boot Application.
@@ -28,7 +29,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class PetClinicApplication {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        Stagemonitor.init();
         SpringApplication.run(PetClinicApplication.class, args);
     }
 
