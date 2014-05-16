@@ -28,10 +28,15 @@
     <wro4j.version>1.8.0</wro4j.version>
 
     <cobertura.version>2.7</cobertura.version>
-
+    <stagemonitor.version>0.84.0</stagemonitor.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>org.stagemonitor</groupId>
+      <artifactId>stagemonitor-web-servlet</artifactId>
+      <version>${stagemonitor.version}</version>
+    </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
