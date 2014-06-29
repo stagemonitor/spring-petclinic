@@ -42,6 +42,11 @@
       <artifactId>stagemonitor-tracing-elasticsearch</artifactId>
       <version>${stagemonitor.version}</version>
     </dependency>
+    <dependency>
+      <groupId>org.stagemonitor</groupId>
+      <artifactId>stagemonitor-logging</artifactId>
+      <version>${stagemonitor.version}</version>
+    </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
