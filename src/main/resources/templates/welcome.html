@@ -9,6 +9,16 @@
         <div class="col-md-12">
           <img class="img-responsive" src="../static/resources/images/pets.png" th:src="@{/resources/images/pets.png}"/>
         </div>
+        <button onclick="ajax()">Ajax</button>
+        <button onclick="error()">JS Error</button>
+        <script>
+            function ajax() {
+                $.get("owners.html?lastName=");
+            }
+            function error() {
+                null.toString();
+            }
+        </script>
     </div>
 
   </body>
