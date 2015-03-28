@@ -1,26 +1,27 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
-Deploy this sample application to Pivotal Web Services:
-<a href="https://push-to.cfapps.io?repo=https%3A%2F%2Fgithub.com%2Fspring-projects%2Fspring-petclinic.git">
-    <img src="https://push-to.cfapps.io/ui/assets/images/Push-to-Pivotal-Dark.svg" width="130" alt="Push" align="top">
-</a>
+# Spring PetClinic Sample Application
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
-## Running petclinic locally
-Petclinic is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
-
-
+## Running petclinic locally with stagemonitor enabled
 ```
-git clone https://github.com/spring-projects/spring-petclinic.git
+git clone https://github.com/stagemonitor/spring-petclinic.git
 cd spring-petclinic
-./mvnw package
-java -jar target/*.jar
+# optional: spin up the stagemonitor backend and dashboards. Requires docker and docker-compose
+# follow the easy steps described here: https://github.com/stagemonitor/stagemonitor-docker-compose
+./mvnw spring-boot:run
 ```
 
 You can then access petclinic here: http://localhost:8080/
 
-<img width="1042" alt="petclinic-screenshot" src="https://cloud.githubusercontent.com/assets/838318/19727082/2aee6d6c-9b8e-11e6-81fe-e889a5ddfded.png">
+## Updating petclinic
+We're using force push (`git push -f`) when updating the stagemonitor version for example to have a clean commit history
+which reflects the steps of the installation guide. That's why you have to update petclinic this way:
+
+```
+git fetch
+git reset --hard origin/master
+```
 
 Or you can run it from Maven directly using the Spring Boot Maven plugin. If you do this it will pick up changes that you make in the project immediately (changes to Java source files require a compile as well - most people use an IDE for this):
 
