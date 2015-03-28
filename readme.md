@@ -1,18 +1,28 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=master)](https://travis-ci.org/spring-projects/spring-petclinic/)
+# Spring PetClinic Sample Application
+
 
 ## Understanding the Spring Petclinic application with a few diagrams
 <a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
 
-## Running petclinic locally
+## Running petclinic locally with stagemonitor enabled
 ```
-	git clone https://github.com/spring-projects/spring-petclinic.git
-	cd spring-petclinic
-	./mvnw spring-boot:run
+git clone https://github.com/stagemonitor/spring-petclinic.git
+cd spring-petclinic
+# optional: spin up the stagemonitor backend and dashboards. Requires docker and docker-compose
+# follow the easy steps described here: https://github.com/stagemonitor/stagemonitor-docker-compose
+./mvnw spring-boot:run
 ```
 
 You can then access petclinic here: http://localhost:8080/
 
-<img width="1042" alt="petclinic-screenshot" src="https://cloud.githubusercontent.com/assets/838318/19727082/2aee6d6c-9b8e-11e6-81fe-e889a5ddfded.png">
+## Updating petclinic
+We're using force push (`git push -f`) when updating the stagemonitor version for example to have a clean commit history
+which reflects the steps of the installation guide. That's why you have to update petclinic this way:
+
+```
+git fetch
+git reset --hard origin/master
+```
 
 ## In case you find a bug/suggested improvement for Spring Petclinic
 Our issue tracker is available here: https://github.com/spring-projects/spring-petclinic/issues
