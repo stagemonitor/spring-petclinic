@@ -59,6 +59,11 @@
       <artifactId>stagemonitor-alerting</artifactId>
       <version>${stagemonitor.version}</version>
     </dependency>
+    <dependency>
+      <groupId>net.sf.uadetector</groupId>
+      <artifactId>uadetector-resources</artifactId>
+      <version>2014.10</version>
+    </dependency>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
