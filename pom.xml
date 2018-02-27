@@ -28,7 +28,7 @@
     <wro4j.version>1.8.0</wro4j.version>
 
     <cobertura.version>2.7</cobertura.version>
-    <stagemonitor.version>0.84.0</stagemonitor.version>
+    <stagemonitor.version>0.87.5</stagemonitor.version>
   </properties>
 
   <dependencies>
@@ -258,6 +258,14 @@
 
   <repositories>
     <repository>
+      <id>jcenter</id>
+      <name>Bintry jcenter</name>
+      <url>http://jcenter.bintray.com/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+    <repository>
       <id>spring-snapshots</id>
       <name>Spring Snapshots</name>
       <url>https://repo.spring.io/snapshot</url>
@@ -276,6 +284,14 @@
   </repositories>
 
   <pluginRepositories>
+      <pluginRepository>
+          <id>jcenter</id>
+          <name>Bintry jcenter</name>
+          <url>http://jcenter.bintray.com/</url>
+          <snapshots>
+              <enabled>false</enabled>
+          </snapshots>
+      </pluginRepository>
     <pluginRepository>
       <id>spring-snapshots</id>
       <name>Spring Snapshots</name>

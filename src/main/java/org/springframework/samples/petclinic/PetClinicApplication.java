@@ -18,7 +18,13 @@ package org.springframework.samples.petclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletContextInitializer;
+import org.springframework.stereotype.Component;
 import org.stagemonitor.core.Stagemonitor;
+import org.stagemonitor.web.servlet.initializer.ServletContainerInitializerUtil;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletException;
 
 /**
  * PetClinic Spring Boot Application.
@@ -32,6 +38,16 @@ public class PetClinicApplication {
     public static void main(String[] args) throws Exception {
         Stagemonitor.init();
         SpringApplication.run(PetClinicApplication.class, args);
+    }
+
+    @Component
+    public static class StagemonitorInitializer implements ServletContextInitializer {
+
+        @Override
+        public void onStartup(ServletContext servletContext) throws ServletException {
+            // necessary for spring boot 2.0.0 until stagemonitor supports it natively
+            ServletContainerInitializerUtil.registerStagemonitorServletContainerInitializers(servletContext);
+        }
     }
 
 }
