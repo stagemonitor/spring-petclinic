@@ -41,7 +41,6 @@ class VetController {
         this.vets = clinicService;
     }
 
-    @GetMapping("/vets.html")
     @Timed
     @Metered
     @GetMapping("/vets.html")
