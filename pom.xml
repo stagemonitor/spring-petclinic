@@ -30,7 +30,7 @@
     <jacoco.version>0.8.2</jacoco.version>
 
     <cobertura.version>2.7</cobertura.version>
-    <stagemonitor.version>0.87.5</stagemonitor.version>
+    <stagemonitor.version>0.88.2</stagemonitor.version>
   </properties>
 
   <dependencies>
