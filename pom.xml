@@ -30,7 +30,7 @@
     <jacoco.version>0.8.2</jacoco.version>
 
     <cobertura.version>2.7</cobertura.version>
-    <stagemonitor.version>0.88.8</stagemonitor.version>
+    <stagemonitor.version>0.88.9</stagemonitor.version>
   </properties>
 
   <dependencies>
@@ -58,6 +58,11 @@
       <groupId>org.stagemonitor</groupId>
       <artifactId>stagemonitor-alerting</artifactId>
       <version>${stagemonitor.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>net.bytebuddy</groupId>
+      <artifactId>byte-buddy</artifactId>
+      <version>1.8.22</version>
     </dependency>
     <dependency>
       <groupId>net.sf.uadetector</groupId>
@@ -252,14 +257,6 @@
 
   <repositories>
     <repository>
-      <id>jcenter</id>
-      <name>Bintry jcenter</name>
-      <url>http://jcenter.bintray.com/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-    <repository>
       <id>spring-snapshots</id>
       <name>Spring Snapshots</name>
       <url>https://repo.spring.io/snapshot</url>
@@ -278,14 +275,6 @@
   </repositories>
 
   <pluginRepositories>
-      <pluginRepository>
-          <id>jcenter</id>
-          <name>Bintry jcenter</name>
-          <url>http://jcenter.bintray.com/</url>
-          <snapshots>
-              <enabled>false</enabled>
-          </snapshots>
-      </pluginRepository>
     <pluginRepository>
       <id>spring-snapshots</id>
       <name>Spring Snapshots</name>
